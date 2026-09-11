@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/
+tmp/
+market_data/__pycache__/
+market_data/公式更新/
+market_data/weekly_workpapers/*_status.json
+market_data/weekly_workpapers/*_snapshot.csv
+market_data/weekly_workpapers/*.json
+logo-options.html
+gradient-exploration.html
+sanbao-logo-creative.md
