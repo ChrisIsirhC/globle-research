@@ -86,7 +86,7 @@ def _fetch_bridge(text_assets: dict[str, str], binary_assets: dict[str, str]) ->
 
 
 @st.cache_data(show_spinner=False)
-def build_embedded_page() -> str:
+def build_embedded_page(source_revision: int) -> str:
     """Build a self-contained copy of the existing HTML app for Streamlit Cloud."""
     html = INDEX_FILE.read_text(encoding="utf-8")
     # The launcher creates the stable "current" file after each successful
@@ -169,4 +169,4 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-components.html(build_embedded_page(), height=7200, scrolling=True)
+components.html(build_embedded_page(INDEX_FILE.stat().st_mtime_ns), height=7200, scrolling=True)
