@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "version_date": "2026-08-30",
+  "state": "historical",
+  "created_at": "2026-09-15T13:10:37+08:00",
+  "source": {
+    "archived_pdf": "source/report.pdf",
+    "sha256": "04502f8093fb452b81c5f1b83e53f2b9cb5d5be32daf47f69dac5fb550490ecd",
+    "content_kind": "archive-pdf"
+  },
+  "market_snapshot": {
+    "index": "market_snapshot/snapshot_index.json",
+    "as_of": "2026-08-28"
+  },
+  "approval": null,
+  "publication": null
+}

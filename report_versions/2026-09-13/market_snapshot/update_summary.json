@@ -1,0 +1,221 @@
+{
+  "updated_at": "2026-09-14T14:20:26+08:00",
+  "steps": [
+    {
+      "name": "Wind 宏观公式",
+      "target": "market_data\\公式更新\\Formula_Data_宏观.xlsx",
+      "status": "success",
+      "detail": "Excel 已刷新并保存 Wind 公式工作簿。",
+      "before": {
+        "exists": true,
+        "modified_at": "2026-09-14T14:19:42",
+        "bytes": 209734
+      },
+      "after": {
+        "exists": true,
+        "modified_at": "2026-09-14T14:20:55",
+        "bytes": 209734
+      },
+      "stderr": ""
+    },
+    {
+      "name": "宏观公式快照",
+      "target": "market_data\\formula_data.json",
+      "status": "success",
+      "detail": "10Y国债收益率至 2026-09-11；商品至 2026-09-13；CPI至 2026-08-31；GDP同比至 2026-06-30；就业至 2026-08-31；景气至 2026-08-31；基准利率至 2026-08-27",
+      "before": {
+        "exists": true,
+        "generated_at": "2026-09-14T14:20:09",
+        "series": {
+          "yields": {
+            "rows": 86,
+            "latest": "2026-09-11"
+          },
+          "commodities": {
+            "rows": 102,
+            "latest": "2026-09-13"
+          },
+          "cpi": {
+            "rows": 44,
+            "latest": "2026-08-31"
+          },
+          "gdp": {
+            "rows": 14,
+            "latest": "2026-06-30"
+          },
+          "employment": {
+            "rows": 44,
+            "latest": "2026-08-31"
+          },
+          "pmi": {
+            "rows": 44,
+            "latest": "2026-08-31"
+          },
+          "policy_rates": {
+            "rows": 111,
+            "latest": "2026-08-27"
+          }
+        }
+      },
+      "after": {
+        "exists": true,
+        "generated_at": "2026-09-14T14:20:57",
+        "series": {
+          "yields": {
+            "rows": 86,
+            "latest": "2026-09-11"
+          },
+          "commodities": {
+            "rows": 102,
+            "latest": "2026-09-13"
+          },
+          "cpi": {
+            "rows": 44,
+            "latest": "2026-08-31"
+          },
+          "gdp": {
+            "rows": 14,
+            "latest": "2026-06-30"
+          },
+          "employment": {
+            "rows": 44,
+            "latest": "2026-08-31"
+          },
+          "pmi": {
+            "rows": 44,
+            "latest": "2026-08-31"
+          },
+          "policy_rates": {
+            "rows": 111,
+            "latest": "2026-08-27"
+          }
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "当前四周市场行情",
+      "target": "market_data\\weekly_workpapers\\weekly_market_current_daily.csv",
+      "status": "warning",
+      "detail": "商品至 2026-09-11；指数/波动率至 2026-09-11；汇率至 2026-09-11；部分外部源可能未返回，详见对应日期状态文件",
+      "before": {
+        "exists": true,
+        "rows": 420,
+        "latest": "2026-09-11",
+        "category_latest": {
+          "商品": "2026-09-11",
+          "指数/波动率": "2026-09-11",
+          "汇率": "2026-09-11"
+        }
+      },
+      "after": {
+        "exists": true,
+        "rows": 420,
+        "latest": "2026-09-11",
+        "category_latest": {
+          "商品": "2026-09-11",
+          "指数/波动率": "2026-09-11",
+          "汇率": "2026-09-11"
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "宏观与政策历史底稿",
+      "target": "market_data/D2_*_history.csv、D3_*_history.csv",
+      "status": "success",
+      "detail": "D2_宏观实际值_history.csv 覆盖至 2026-08-01，271 条记录；D2_财政流动性_history.csv 覆盖至 2026-09-11，690 条记录；D2_贸易外部部门_history.csv 覆盖至 2026-07-01，178 条记录；D3_政策利率_history.csv 覆盖至 2026-09-14，1875 条记录",
+      "before": {
+        "D2_宏观实际值_history.csv": {
+          "exists": true,
+          "rows": 271,
+          "latest": "2026-08-01"
+        },
+        "D2_财政流动性_history.csv": {
+          "exists": true,
+          "rows": 690,
+          "latest": "2026-09-11"
+        },
+        "D2_贸易外部部门_history.csv": {
+          "exists": true,
+          "rows": 178,
+          "latest": "2026-07-01"
+        },
+        "D3_政策利率_history.csv": {
+          "exists": true,
+          "rows": 1875,
+          "latest": "2026-09-14"
+        }
+      },
+      "after": {
+        "D2_宏观实际值_history.csv": {
+          "exists": true,
+          "rows": 271,
+          "latest": "2026-08-01"
+        },
+        "D2_财政流动性_history.csv": {
+          "exists": true,
+          "rows": 690,
+          "latest": "2026-09-11"
+        },
+        "D2_贸易外部部门_history.csv": {
+          "exists": true,
+          "rows": 178,
+          "latest": "2026-07-01"
+        },
+        "D3_政策利率_history.csv": {
+          "exists": true,
+          "rows": 1875,
+          "latest": "2026-09-14"
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "全球指数历史底稿",
+      "target": "market_data\\global_indices_history.csv",
+      "status": "success",
+      "detail": "覆盖至 2026-09-14，2016 条记录",
+      "before": {
+        "exists": true,
+        "rows": 2016,
+        "latest": "2026-09-14"
+      },
+      "after": {
+        "exists": true,
+        "rows": 2016,
+        "latest": "2026-09-14"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "Choice EDB 映射指标",
+      "target": "market_data\\edb_refresh_status.json",
+      "status": "skipped",
+      "detail": "D2_宏观实际值：0 个已映射；D3_政策利率：0 个已映射",
+      "before": {
+        "status_exists": true
+      },
+      "after": {
+        "source": "Choice API / EDB",
+        "refreshed_at": "2026-09-14T14:21:32.274506+08:00",
+        "mechanism": "API only; no Choice Excel formulas",
+        "datasets": {
+          "D2_宏观实际值": {
+            "configured_metrics": 25,
+            "mapped_metrics": 0,
+            "output": null,
+            "reason": "No verified Choice EDB IDs are registered."
+          },
+          "D3_政策利率": {
+            "configured_metrics": 6,
+            "mapped_metrics": 0,
+            "output": null,
+            "reason": "No verified Choice EDB IDs are registered."
+          }
+        }
+      },
+      "stderr": ""
+    }
+  ]
+}

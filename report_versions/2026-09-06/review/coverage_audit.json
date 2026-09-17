@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-09-15T13:13:34",
+  "report_date": "2026-09-06",
+  "source": "report_versions\\2026-09-06\\source\\decomposition\\weekly_report_decomposition.json",
+  "review": "report_versions\\2026-09-06\\review\\review_content.json",
+  "rows": [
+    {
+      "source_section": "概述",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_sentence_count": 8,
+      "exact_sentence_matches": 8,
+      "missing_sentence_count": 0,
+      "missing_openings": [],
+      "status": "complete"
+    },
+    {
+      "source_section": "美国",
+      "source_pages": [
+        2,
+        3
+      ],
+      "source_sentence_count": 7,
+      "exact_sentence_matches": 7,
+      "missing_sentence_count": 0,
+      "missing_openings": [],
+      "status": "complete"
+    },
+    {
+      "source_section": "德国",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_sentence_count": 3,
+      "exact_sentence_matches": 3,
+      "missing_sentence_count": 0,
+      "missing_openings": [],
+      "status": "complete"
+    },
+    {
+      "source_section": "法国",
+      "source_pages": [
+        4
+      ],
+      "source_sentence_count": 3,
+      "exact_sentence_matches": 3,
+      "missing_sentence_count": 0,
+      "missing_openings": [],
+      "status": "complete"
+    },
+    {
+      "source_section": "日本",
+      "source_pages": [
+        4,
+        5
+      ],
+      "source_sentence_count": 5,
+      "exact_sentence_matches": 5,
+      "missing_sentence_count": 0,
+      "missing_openings": [],
+      "status": "complete"
+    },
+    {
+      "source_section": "韩国",
+      "source_pages": [
+        5,
+        6
+      ],
+      "source_sentence_count": 7,
+      "exact_sentence_matches": 7,
+      "missing_sentence_count": 0,
+      "missing_openings": [],
+      "status": "complete"
+    },
+    {
+      "source_section": "巴西",
+      "source_pages": [
+        6
+      ],
+      "source_sentence_count": 4,
+      "exact_sentence_matches": 4,
+      "missing_sentence_count": 0,
+      "missing_openings": [],
+      "status": "complete"
+    },
+    {
+      "source_section": "沙特",
+      "source_pages": [
+        6,
+        7
+      ],
+      "source_sentence_count": 5,
+      "exact_sentence_matches": 5,
+      "missing_sentence_count": 0,
+      "missing_openings": [],
+      "status": "complete"
+    },
+    {
+      "source_section": "印度",
+      "source_pages": [
+        7,
+        8
+      ],
+      "source_sentence_count": 5,
+      "exact_sentence_matches": 5,
+      "missing_sentence_count": 0,
+      "missing_openings": [],
+      "status": "complete"
+    },
+    {
+      "source_section": "金银",
+      "source_pages": [
+        8,
+        9
+      ],
+      "source_sentence_count": 5,
+      "exact_sentence_matches": 5,
+      "missing_sentence_count": 0,
+      "missing_openings": [],
+      "status": "complete"
+    },
+    {
+      "source_section": "原油",
+      "source_pages": [
+        9,
+        10
+      ],
+      "source_sentence_count": 6,
+      "exact_sentence_matches": 6,
+      "missing_sentence_count": 0,
+      "missing_openings": [],
+      "status": "complete"
+    }
+  ],
+  "summary": {
+    "source_sentences": 58,
+    "exact_matches": 58,
+    "missing": 0
+  }
+}

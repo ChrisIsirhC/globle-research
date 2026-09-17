@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-09-15T10:37:35+08:00",
+  "files": [
+    {
+      "snapshot_path": "market_snapshot/weekly_market_daily.csv",
+      "source_path": "market_data/weekly_workpapers/weekly_market_2026-08-07_2026-09-04_daily.csv",
+      "sha256": "4cc7ebd290e010063d609d5839cab97a1f6375b2653c54b06f0049c16c3f88af"
+    },
+    {
+      "snapshot_path": "market_snapshot/formula_data.json",
+      "source_path": "market_data/formula_data.json",
+      "as_of": "2026-09-04",
+      "sha256": "288c3c31df92dbd97305ba7df109cdaa6ce9d8d1c5241d25057726bc92052590"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+/* Research-terminal motion system: restrained feedback, not decorative motion. */
+:root {
+  --motion-fast: 150ms;
+  --motion-base: 260ms;
+  --motion-slow: 560ms;
+  --motion-ease: cubic-bezier(.22, .72, .18, 1);
+  --motion-ease-out: cubic-bezier(.16, 1, .3, 1);
+}
+
+html { scroll-behavior: smooth; }
+body.motion-ready { overflow-x: clip; }
+
+/* Navigation: a precise, quiet sense of location. */
+.top { transition: background-color var(--motion-base) var(--motion-ease), box-shadow var(--motion-base) var(--motion-ease); }
+.top.motion-scrolled { background: rgba(251,252,249,.975); box-shadow: 0 8px 28px rgba(11,38,28,.07); }
+.nav button { transition: color var(--motion-fast) var(--motion-ease), background-color var(--motion-fast) var(--motion-ease); }
+.nav button:after { transform: scaleX(0); transform-origin: left; transition: transform var(--motion-base) var(--motion-ease-out), background-color var(--motion-fast) var(--motion-ease); }
+.nav button.active:after { transform: scaleX(1); }
+.nav button:not(.active):hover:after { background: rgba(166,117,45,.5); transform: scaleX(1); }
+.nav-cluster .subnav { transform: translateY(-5px) scale(.985); opacity: 0; visibility: hidden; transition: opacity var(--motion-fast) ease, transform var(--motion-base) var(--motion-ease-out), visibility 0s linear var(--motion-base); }
+.nav-cluster:hover .subnav, .nav-cluster:focus-within .subnav { transform: translateY(0) scale(1); opacity: 1; visibility: visible; transition-delay: 0s; }
+.nav-cluster .subnav button { transition: background-color var(--motion-fast) ease, color var(--motion-fast) ease, transform var(--motion-fast) var(--motion-ease); }
+.nav-cluster .subnav button:hover, .nav-cluster .subnav button:focus-visible { transform: translateX(3px); }
+
+/* Page and module entrance. Content remains readable without waiting for an animation. */
+.screen.motion-screen-in { animation: screen-in var(--motion-base) var(--motion-ease-out) both; }
+@keyframes screen-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.screen.motion-week-in { animation: research-week-in 480ms var(--motion-ease-out) both; }
+@keyframes research-week-in { from { opacity: .55; transform: translateY(10px); filter: saturate(.82); } to { opacity: 1; transform: none; filter: none; } }
+
+[data-motion-reveal] { opacity: 0; transform: translate3d(0,9px,0); transition: opacity 480ms var(--motion-ease-out), transform 480ms var(--motion-ease-out); will-change: opacity, transform; backface-visibility: hidden; }
+[data-motion-reveal].motion-visible { opacity: 1; transform: none; }
+
+.home-lead, .home-reading-card, .home-closing, .panel, .asset-research, .yield, .history-report, .view, .analysis-row { transition: border-color var(--motion-base) var(--motion-ease), box-shadow var(--motion-base) var(--motion-ease), transform var(--motion-base) var(--motion-ease), background-color var(--motion-base) var(--motion-ease); }
+.home-reading-card:hover, .asset-research:hover, .yield:hover, .view:hover, .analysis-row:hover { border-color: rgba(166,117,45,.42); box-shadow: 0 16px 38px rgba(19,54,40,.075); transform: translateY(-2px); }
+.home-reading-card header span, .home-closing header:before { transition: background-color var(--motion-base) var(--motion-ease), transform var(--motion-base) var(--motion-ease); }
+.home-reading-card:hover header span { background: var(--amber); transform: translateY(-1px); }
+
+/* Home reading sequence: individual ideas settle in, without a typewriter effect. */
+.home-lead-copy h1 { animation: editorial-title-in 620ms var(--motion-ease-out) both; }
+.home-lead-impact { animation: editorial-copy-in 560ms 100ms var(--motion-ease-out) both; }
+@keyframes editorial-title-in { from { opacity: 0; transform: translateY(14px); clip-path: inset(0 0 100% 0); } to { opacity: 1; transform: none; clip-path: inset(0 0 0 0); } }
+@keyframes editorial-copy-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.home-threads > div > .home-thread { opacity: 0; transform: translateX(-8px); animation: thread-in 460ms var(--motion-ease-out) forwards; }
+.home-threads > div > .home-thread:nth-child(1) { animation-delay: 120ms; }
+.home-threads > div > .home-thread:nth-child(2) { animation-delay: 175ms; }
+.home-threads > div > .home-thread:nth-child(3) { animation-delay: 230ms; }
+@keyframes thread-in { to { opacity: 1; transform: translateX(0); } }
+
+/* Research cards should invite reading, not behave as dashboard widgets. */
+.research-copy { position: relative; }
+.research-copy:before { position: absolute; top: 0; bottom: 0; left: -13px; width: 2px; content: ""; background: var(--amber); transform: scaleY(.2); transform-origin: top; opacity: .35; transition: transform var(--motion-slow) var(--motion-ease-out), opacity var(--motion-base) var(--motion-ease); }
+.asset-research:hover .research-copy:before, .analysis-row:hover .research-copy:before { transform: scaleY(1); opacity: .9; }
+.research-copy strong, .report-paragraphs strong, .research-body strong { transition: color var(--motion-fast) ease, background-color var(--motion-fast) ease; }
+
+/* Selectors act like a considered research cursor, not a dashboard button. */
+.asset, .country-nav button, .country-data-rail button, .tabs button, .macro-options button, .rate-options button { transition: color var(--motion-fast) ease, background-color var(--motion-fast) ease, transform var(--motion-fast) var(--motion-ease), border-color var(--motion-fast) ease; }
+.asset:hover, .country-nav button:hover, .country-data-rail button:hover, .macro-options button:hover, .rate-options button:hover { transform: translateX(3px); }
+.asset.active, .country-nav button.active, .country-data-rail button.active, .macro-options button.active, .rate-options button.active { position: relative; }
+.asset.active:before, .country-data-rail button.active:before, .macro-options button.active:before, .rate-options button.active:before { position: absolute; top: 50%; left: -1px; width: 2px; height: 58%; content: ""; background: var(--amber); transform: translateY(-50%) scaleY(0); transform-origin: center; animation: selection-line 340ms var(--motion-ease-out) forwards; }
+@keyframes selection-line { to { transform: translateY(-50%) scaleY(1); } }
+
+/* Charts: animate only when a data state is first presented. Interactions remain immediate. */
+.chart-stage { isolation: isolate; }
+.chart-stage svg { overflow: visible; }
+.chart-stage .chart-tooltip { transition: opacity 120ms ease, transform 160ms var(--motion-ease-out), left 80ms linear; }
+.chart-stage .focus, .chart-stage .multi-cross { transition: opacity 120ms ease; }
+.motion-chart svg text { transition: fill var(--motion-fast) ease; }
+.motion-chart .series-label { transition: opacity var(--motion-fast) ease; }
+.motion-bar { animation: bar-fade-in 300ms var(--motion-ease-out) both; }
+@keyframes bar-fade-in { from { opacity: 0; } to { opacity: 1; } }
+.motion-chart-ghost { position: absolute; z-index: 2; inset: 0; pointer-events: none; opacity: .72; transform: scale(1); transform-origin: center; transition: opacity 300ms var(--motion-ease-out), transform 300ms var(--motion-ease-out); }
+.motion-chart-ghost svg { width: 100%; height: auto; overflow: visible; }
+.motion-chart-ghost.motion-settle { opacity: 0; transform: scale(1.006); }
+
+/* Version selector and search provide visible, low-friction state changes. */
+.history-report { transition-duration: var(--motion-base); }
+.history-report:not(.active):hover { border-color: rgba(166,117,45,.5); transform: translateX(3px); box-shadow: 0 12px 30px rgba(21,47,35,.08); }
+.history-report.active { animation: active-week-in 620ms var(--motion-ease-out) both; }
+.history-report.active:after { animation: pattern-settle 800ms var(--motion-ease-out) both; }
+@keyframes active-week-in { from { opacity: .5; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes pattern-settle { from { opacity: 0; background-position: -48px 0; } to { opacity: 1; background-position: 0 0; } }
+.search-results.open { display: block; transform-origin: top right; animation: search-in 170ms var(--motion-ease-out) both; }
+.search-result { transition: background-color var(--motion-fast) ease, transform var(--motion-fast) var(--motion-ease), padding-left var(--motion-fast) var(--motion-ease); }
+.search-result:hover, .search-result.active { padding-left: 20px; transform: translateX(1px); }
+@keyframes search-in { from { opacity: 0; transform: translateY(-5px) scale(.99); } to { opacity: 1; transform: none; } }
+
+button, .button, .text-link, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, .button:focus-visible, .text-link:focus-visible, a:focus-visible, .search:focus-visible { outline: 2px solid rgba(166,117,45,.8); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *:before, *:after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+  [data-motion-reveal] { opacity: 1; transform: none; }
+}
+
+@media (max-width: 700px) {
+  .home-reading-card:hover, .asset-research:hover, .yield:hover, .view:hover, .analysis-row:hover, .history-report:not(.active):hover { transform: none; }
+}

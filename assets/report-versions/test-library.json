@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "mode": "history-library-test",
+  "versions": [
+    {
+      "id": "20260906",
+      "report_date": "2026-09-06",
+      "label": "2026.09.06",
+      "state": "historical",
+      "badge": "已归档",
+      "headline": "美伊冲突再升级与就业韧性共同推升加息交易",
+      "content": {
+        "kind": "legacy-script"
+      },
+      "market_snapshot": {
+        "rows": "report_versions/2026-09-06/market_snapshot/weekly_market_daily.csv",
+        "formula": "report_versions/2026-09-06/market_snapshot/formula_data.json"
+      },
+      "window": { "from": "2026-08-28", "to": "2026-09-04" }
+    },
+    {
+      "id": "20260913",
+      "report_date": "2026-09-13",
+      "label": "2026.09.13",
+      "state": "published",
+      "badge": "当前研究周",
+      "headline": "通胀与油价共振，加息概率升至 85%",
+      "content": {
+        "kind": "review-json",
+        "path": "assets/report-versions/2026-09-13/content.json?v=20260916b"
+      },
+      "market_snapshot": {
+        "rows": "report_versions/2026-09-13/market_snapshot/weekly_market_current_daily.csv",
+        "formula": "report_versions/2026-09-13/market_snapshot/formula_data.json"
+      },
+      "window": { "from": "2026-09-04", "to": "2026-09-11" }
+    },
+    {
+      "id": "20260830",
+      "report_date": "2026-08-30",
+      "label": "2026.08.30",
+      "state": "historical",
+      "badge": "已归档",
+      "headline": "沃什放鹰与美伊外交缓和重塑跨资产定价",
+      "content": {
+        "kind": "archive-pdf"
+      },
+      "market_snapshot": {
+        "rows": "report_versions/2026-08-30/market_snapshot/weekly_market_daily.csv",
+        "formula": "report_versions/2026-08-30/market_snapshot/formula_data.json"
+      },
+      "window": { "from": "2026-08-21", "to": "2026-08-28" }
+    }
+  ]
+}

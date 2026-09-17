@@ -1,0 +1,41 @@
+{
+  "report_date": "2026-09-13",
+  "generated_at": "2026-09-15T16:28:16+08:00",
+  "summary": {
+    "content_blocks": 42,
+    "section_counts": {
+      "首页": 11,
+      "全球资产": 3,
+      "商品": 2,
+      "国家研究": 26
+    },
+    "country_count": 8,
+    "country_module_counts": {
+      "美国": 5,
+      "德国": 3,
+      "法国": 3,
+      "日本": 3,
+      "韩国": 3,
+      "巴西": 3,
+      "沙特": 3,
+      "印度": 3
+    },
+    "coverage_audit_sections": 11,
+    "unresolved_items": 5
+  },
+  "required_field_gaps": {
+    "page_route": [],
+    "source_pages": [],
+    "source_quote": [],
+    "body_markdown": []
+  },
+  "errors": {},
+  "warnings": [
+    "存在待审核项，批准时必须明确确认。",
+    ""
+  ],
+  "publish_gate": {
+    "passed": true,
+    "reason": "required_fields_complete"
+  }
+}

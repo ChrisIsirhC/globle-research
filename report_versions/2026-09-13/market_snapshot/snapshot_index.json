@@ -1,0 +1,45 @@
+{
+  "captured_at": "2026-09-15T10:15:35+08:00",
+  "files": [
+    {
+      "source_path": "market_data/formula_data.json",
+      "snapshot_path": "market_snapshot/formula_data.json",
+      "sha256": "cf2d396fdf39338bd035a953e249cdfeb8f944c31ca042fb6295f7090e693533",
+      "bytes": 64944,
+      "observation_summary": {
+        "type": "formula_data",
+        "series_latest": {
+          "yields": "2026-09-11",
+          "commodities": "2026-09-13",
+          "cpi": "2026-08-31",
+          "gdp": "2026-06-30",
+          "employment": "2026-08-31",
+          "pmi": "2026-08-31",
+          "policy_rates": "2026-08-27"
+        }
+      }
+    },
+    {
+      "source_path": "market_data/weekly_workpapers/weekly_market_current_daily.csv",
+      "snapshot_path": "market_snapshot/weekly_market_current_daily.csv",
+      "sha256": "6e3c3dadddaf6389f41d692ee3dc9b241609ec1b164c79433b9e8fb9434cda28",
+      "bytes": 28144,
+      "observation_summary": {
+        "type": "market_csv",
+        "rows": 420,
+        "earliest": "2026-08-14",
+        "latest": "2026-09-11"
+      }
+    },
+    {
+      "source_path": "update_summary.json",
+      "snapshot_path": "market_snapshot/update_summary.json",
+      "sha256": "3e4a1924ba63245dcd8f44892485dec835c4a49bacd0b95bf9f9e7253989292f",
+      "bytes": 6298,
+      "observation_summary": {
+        "type": "update_status",
+        "updated_at": "2026-09-14T14:20:26+08:00"
+      }
+    }
+  ]
+}
