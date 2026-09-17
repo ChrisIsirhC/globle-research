@@ -337,4 +337,7 @@ Promise.all([loadCsv(),fetch(FORMULA).then(r=>r.json())]).then(([csv,json])=>{ro
 /* 周报内容脚本会再包装汇率视图；最后只保留一次美元总览，并还原各货币对本国分析。 */
 const reportContentFxView=fxView;
 fxView=function(){reportContentFxView();const key=FX[fxPair]?.c;if(key)fxCountryNote(key);fxDollarNote()};
-</script><script src="assets/report-library-history.js?v=20260916b"></script></body></html>
+</script><script src="assets/report-library-history.js?v=20260916b"></script><script>
+/* Navigation is deliberately delegated so dynamic research-week rendering cannot drop a top-level handler. */
+document.addEventListener('click',event=>{const button=event.target.closest?.('[data-screen]');if(!button)return;event.preventDefault();nav(button.dataset.screen)});
+</script></body></html>
